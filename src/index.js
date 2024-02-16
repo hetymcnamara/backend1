@@ -9,11 +9,10 @@ import { dataSeedRouter } from "./routes/resortData.js";
 
 const app = express();
 
-// GLOBAL CONFIGURATION
+// GLOBAL CONFIGURATION PULLED FROM ENV FILE
 const mongoURI = process.env.MONGO_URI;
 const db = mongoose.connection;
 mongoose.connect(mongoURI);
-// console.log(process.env);
 
 // CONNECTION ERROR/SUCCESS - OPTIONAL BUT HELPFUL
 // DEFINE CALLBACK FUNCTIONS FRO VARIOUS EVENTS
